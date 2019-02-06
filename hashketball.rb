@@ -128,15 +128,17 @@ def big_shoe_rebounds
   gh=game_hash
   bigsize=0
   bigfoot="name"
+  teamplace=""
   gh.each do |team, stats|
     stats[:players].each_key do |nameval|
         if (gh[team][:players][nameval][:shoe]>bigsize)
           bigsize=gh[team][:players][nameval][:shoe]
           bigfoot=nameval
+          teamplace=team
         end
     end
   end
-  puts bigfoot
+  gh[teamplace][:players][bigfoot][:rebounds]
 end
 
 
