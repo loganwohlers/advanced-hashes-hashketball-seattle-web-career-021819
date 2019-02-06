@@ -81,7 +81,12 @@ def shoe_size (name)
     end
   end
 end
-  
+
+def team_colors (team)
+  gh=game_hash
+  gh.each do |place, stats|
+    if(stats.each_key).contain? 
+end
 
   
 
