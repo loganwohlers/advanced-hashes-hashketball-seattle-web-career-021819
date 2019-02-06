@@ -76,7 +76,7 @@ def shoe_size (name)
   gh.each do |team, stats|
     stats[:players].each_key do |nameval|
       if (nameval==name)
-        return gh[team][:players][nameval][:shoe_size]
+        return gh[team][:players][nameval][:shoe]
       end
     end
   end
