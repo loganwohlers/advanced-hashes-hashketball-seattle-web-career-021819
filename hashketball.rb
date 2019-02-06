@@ -131,7 +131,7 @@ def big_shoe_rebounds
   gh.each do |team, stats|
     stats[:players].each_key do |nameval|
         if (gh[team][:players][nameval][:shoe]>bigsize)
-          bigfoot=gh[team][:players][nameval][:shoe]
+          bigsize=gh[team][:players][nameval][:shoe]
           bigfoot=nameval
         end
     end
