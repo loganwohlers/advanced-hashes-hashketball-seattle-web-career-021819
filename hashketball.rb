@@ -106,7 +106,7 @@ def player_numbers (nbateam)
   gh.each |team, stats|
     if stats[:team_name]==nbateam
       stats[:players].each_key do |name|
-        jerseys.push (gh[team][:players][name][:number]
+        jerseys.push (gh[team][:players][name][:number])
       end
     end
   end
