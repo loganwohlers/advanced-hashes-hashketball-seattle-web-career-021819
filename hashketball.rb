@@ -98,8 +98,13 @@ teams=[]
     teams.push(gh[team][:team_name])
   end
   teams
+end
 
-
+def player_numbers (nbateam)
+  jerseys=[]
+  gh=game_hash
+  gh.each |team, stats|
+    if stats[:team_name]
 end
 
   
