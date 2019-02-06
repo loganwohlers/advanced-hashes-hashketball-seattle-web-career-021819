@@ -24,7 +24,7 @@ def game_hash
     players: {"Jeff Adrien"=>{number: 4 , shoe: 18, points: 10, 
               rebounds: 1, assists: 1, steals: 2, blocks: 7, slam_dunks:
               2},
-             "Bismack Biyombo"=>{number: 0 , shoe: 16, points: 12, 
+             "Bismak Biyombo"=>{number: 0 , shoe: 16, points: 12, 
               rebounds: 4, assists: 7, steals: 7, blocks: 15, slam_dunks:
               10},
              "DeSagna Diop"=>{number: 2 , shoe: 14, points: 24, 
@@ -59,18 +59,29 @@ def good_practices
 end
 #good_practices
  #puts gh[:home][:players]["Brook Lopez"][:points]
-#puts a[0]
+
 def num_points_scored (name)
   gh=game_hash
   gh.each do |team, stats|
     stats[:players].each_key do |nameval|
       if (nameval==name)
-        #want whole method to cancel here and return like java
         return gh[team][:players][nameval][:points]
       end
     end
   end
 end
+
+def shoe_size (name)
+  gh=game_hash
+  gh.each do |team, stats|
+    stats[:players].each_key do |nameval|
+      if (nameval==name)
+        return gh[team][:players][nameval][:shoe_size]
+      end
+    end
+  end
+end
+  
 
   
 
