@@ -91,6 +91,17 @@ def team_colors (team)
   end
 end
 
+def team_names 
+teams=[]
+  gh=game_hash
+  gh.each do| team, stats|
+    teams.push(gh[team][:team_name])
+  end
+  teams
+
+
+end
+
   
 
 
