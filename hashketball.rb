@@ -124,9 +124,20 @@ def player_stats (name)
   end
 end
 
-def big_shoe_rebounds 
-  
+def big_shoe_rebounds
+  gh=game_hash
+  bigsize=0
+  bigfoot="name"
+  gh.each do |team, stats|
+    stats[:players].each_key do |nameval|
+        if (gh[team][:players][nameval][:shoe]>bigfoot)
+          bigfoot=gh[team][:players][nameval][:shoe]
+          bigfoot=nameval
+        end
+    end
+  end
 end
+
 
   
 
