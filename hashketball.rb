@@ -110,10 +110,7 @@ def player_numbers (nbateam)
       end
     end
   end
-  
   jerseys
-      
-      
 end
 
   
