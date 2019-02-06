@@ -66,11 +66,10 @@ def num_points_scored (name)
     stats[:players].each_key do |nameval|
       if (nameval==name)
         #want whole method to cancel here and return like java
-        return gh[team][:players][nameval][:points])
+        return gh[team][:players][nameval][:points]
       end
     end
   end
-  
 end
 
   
