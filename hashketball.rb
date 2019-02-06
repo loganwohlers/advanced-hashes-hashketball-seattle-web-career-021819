@@ -113,6 +113,17 @@ def player_numbers (nbateam)
   jerseys
 end
 
+def player_stats (name)
+  gh=game_hash
+  gh.each do |team, stats|
+    stats[:players].each_key do |nameval|
+      if (nameval==name)
+        return gh[team][:players][nameval][:shoe]
+      end
+    end
+  end
+end
+
   
 
 
