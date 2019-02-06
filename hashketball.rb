@@ -110,7 +110,7 @@ def player_numbers (nbateam)
       end
     end
   end
-  jerseys.sort
+  jerseys
 end
 
   
