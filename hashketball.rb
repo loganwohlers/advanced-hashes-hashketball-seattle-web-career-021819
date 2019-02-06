@@ -85,7 +85,10 @@ end
 def team_colors (team)
   gh=game_hash
   gh.each do |place, stats|
-    if(stats.each_key).contain? 
+    if(stats[:team_name]==team)
+      return gh[place][:colors]
+    end
+  end
 end
 
   
